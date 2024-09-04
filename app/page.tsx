@@ -14,6 +14,9 @@ export default function Home() {
       console.log("addEventListener message", event);
       if (event.origin === "https://test.todaydealspro.com") {
         console.log("Message from iframe:", event.data);
+        if (event.data === "closePage") {
+          setisOpen(false);
+        }
       }
     });
   }, []);
@@ -24,7 +27,7 @@ export default function Home() {
       <Modal
         size="full"
         isOpen={isOpen}
-        onClose={() => setisOpen(false)}
+        // onClose={() => setisOpen(false)}
         motionProps={{
           variants: {
             enter: {
