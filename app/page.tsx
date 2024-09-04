@@ -1,11 +1,22 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Modal, ModalContent, ModalHeader, ModalBody, ModalFooter, useDisclosure } from "@nextui-org/modal";
 import { Button } from "@nextui-org/button";
 
+// getdailygift page
+
 export default function Home() {
   const [isOpen, setisOpen] = useState(false);
+
+  useEffect(() => {
+    window.addEventListener("message", (event) => {
+      console.log("addEventListener message", event);
+      if (event.origin === "https://test.todaydealspro.com") {
+        console.log("Message from iframe:", event.data);
+      }
+    });
+  }, []);
 
   return (
     <section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10">
