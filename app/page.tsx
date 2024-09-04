@@ -11,7 +11,7 @@ export default function Home() {
 
   useEffect(() => {
     window.addEventListener("message", (event) => {
-      if (event.origin === "https://test.todaydealspro.com") {
+      if (event.origin === "https://sample-site-sandy.vercel.app") {
         console.log("Message from iframe:", event.data);
         if (event.data === "closePage") {
           setisOpen(false);
@@ -55,7 +55,7 @@ export default function Home() {
               <iframe
                 referrerPolicy="no-referrer"
                 style={{ width: "100vw", height: "100vh" }}
-                src="https://test.todaydealspro.com/v3/landing/index?userid=stonetest6_a_f&language=en&timezone=America/Chicago&appid=0fd4b145c5e34a17a6f1204be9b0cb21"
+                src="https://sample-site-sandy.vercel.app/"
               />
             </>
           )}
