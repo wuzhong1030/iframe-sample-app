@@ -53,7 +53,7 @@ export default function Home() {
               <iframe
                 referrerPolicy="no-referrer"
                 style={{ width: "100vw", height: "100vh" }}
-                src="https://test.todaydealspro.com/v2/landing/index?userid=stonetest6_a_f&language=en&timezone=America/Chicago&appid=0fd4b145c5e34a17a6f1204be9b0cb21"
+                src="https://test.todaydealspro.com/v3/landing/index?userid=stonetest6_a_f&language=en&timezone=America/Chicago&appid=0fd4b145c5e34a17a6f1204be9b0cb21"
               />
             </>
           )}
