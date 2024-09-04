@@ -20,8 +20,8 @@ export default function Home() {
 
   return (
     <section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10">
-      <Button onClick={() => setisOpen(true)}>click me1</Button>
-      <Modal size="full" isOpen={isOpen} onClose={() => setisOpen(false)} hideCloseButton disableAnimation>
+      <Button onClick={() => setisOpen(true)}>click me2</Button>
+      <Modal size="full" isOpen={isOpen} onClose={() => setisOpen(false)} hideCloseButton>
         <ModalContent>
           {(onClose) => (
             <>

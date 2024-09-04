@@ -1,11 +1,3 @@
-/*
- * @Author: stone.wu stone.wu@webeye.com
- * @Date: 2024-08-23 20:41:38
- * @LastEditors: stone.wu stone.wu@webeye.com
- * @LastEditTime: 2024-09-04 09:50:45
- * @FilePath: /iframe-sample-app/app/layout.tsx
- * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
- */
 import "@/styles/globals.css";
 import { Metadata, Viewport } from "next";
 import { Link } from "@nextui-org/link";
@@ -39,7 +31,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html suppressHydrationWarning lang="en">
       <head />
-      <body className="min-h-screen">
+      <body className={clsx("min-h-screen bg-background font-sans antialiased", fontSans.variable)}>
         <Providers themeProps={{ attribute: "class", defaultTheme: "light" }}>
           <main className="container mx-auto max-w-7xl pt-16 px-6 flex-grow">{children}</main>
         </Providers>
